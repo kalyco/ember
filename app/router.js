@@ -8,6 +8,10 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.resource('posts');
+  this.resource('post'), { path: '/posts/:post_id' };
 });
 
 export default Router;
+
+// path segments are prefixed by a colon and allows for dynamic content
+// takes in params for specific id
